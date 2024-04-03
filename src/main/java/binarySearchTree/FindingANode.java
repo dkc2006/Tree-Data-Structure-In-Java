@@ -1,22 +1,19 @@
 package binarySearchTree;
 
-public class BuildATree {
+public class FindingANode {
     int data;
     FindingANode leftNode;
     FindingANode rightNode;
 
-    public BuildATree(int data) {
+    public FindingANode(int data) {
         this.data = data;
-        this.leftNode = null;
-        this.rightNode = null;
     }
-
 }
 
-class BinaryTree {
+class BinaryTree1 {
     FindingANode rootNode;
 
-    void insertNode(int data) {
+    public void insertNode(int data) {
         FindingANode node = new FindingANode(data);
         if (rootNode == null) {
             rootNode = node;
@@ -41,12 +38,23 @@ class BinaryTree {
             }
         }
     }
+
+    public FindingANode find(int key) {
+        FindingANode currentNode = rootNode;
+        while (currentNode.data != key) {
+            if (key < currentNode.data) currentNode = currentNode.leftNode;
+            else currentNode = currentNode.rightNode;
+            if (currentNode == null) return null;
+        }
+        return currentNode;
+    }
 }
 
-class Main {
+
+class Main1 {
     public static void main(String[] args) {
-        BinaryTree binaryTree = new BinaryTree();
-        binaryTree.rootNode = new FindingANode(53);
+        BinaryTree1 binaryTree1 = new BinaryTree1();
+        binaryTree1.insertNode(53);
         FindingANode thirty = new FindingANode(30);
         FindingANode seventyTwo = new FindingANode(72);
         FindingANode fourteen = new FindingANode(14);
@@ -58,8 +66,9 @@ class Main {
         FindingANode TwentyThree = new FindingANode(23);
         FindingANode thirtyFour = new FindingANode(34);
         FindingANode fourtySeven = new FindingANode(47);
-        binaryTree.rootNode.leftNode = thirty;
-        binaryTree.rootNode.rightNode = seventyTwo;
+        binaryTree1.rootNode = new FindingANode(53); // Initialize rootNode
+        binaryTree1.rootNode.leftNode = thirty; // Initialize leftNode of rootNode
+        binaryTree1.rootNode.rightNode = seventyTwo; // Initialize rightNode of rootNode
         thirty.leftNode = fourteen;
         thirty.rightNode = thirtyNine;
         seventyTwo.leftNode = sixtyOne;
@@ -69,5 +78,11 @@ class Main {
         thirtyNine.leftNode = thirtyFour;
         thirtyNine.rightNode = fourtySeven;
         eightyFour.leftNode = seventyNine;
+        FindingANode findResult = binaryTree1.find(23);
+        if (findResult != null) {
+            System.out.println("Node found with key: " + findResult.data);
+        } else {
+            System.out.println("Node with key not found.");
+        }
     }
 }
