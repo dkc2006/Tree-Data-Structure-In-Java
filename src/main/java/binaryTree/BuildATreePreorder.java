@@ -1,4 +1,4 @@
-package binarySearchTree;
+package binaryTree;
 
 public class BuildATreePreorder {
     public static void main(String[] args) {

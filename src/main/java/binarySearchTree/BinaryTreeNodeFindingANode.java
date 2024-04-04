@@ -1,25 +1,25 @@
 package binarySearchTree;
 
-public class FindingANode {
+public class BinaryTreeNodeFindingANode {
     int data;
-    FindingANode leftNode;
-    FindingANode rightNode;
+    BinaryTreeNodeFindingANode leftNode;
+    BinaryTreeNodeFindingANode rightNode;
 
-    public FindingANode(int data) {
+    public BinaryTreeNodeFindingANode(int data) {
         this.data = data;
     }
 }
 
 class BinaryTree1 {
-    FindingANode rootNode;
+    BinaryTreeNodeFindingANode rootNode;
 
     public void insertNode(int data) {
-        FindingANode node = new FindingANode(data);
+        BinaryTreeNodeFindingANode node = new BinaryTreeNodeFindingANode(data);
         if (rootNode == null) {
             rootNode = node;
         } else {
-            FindingANode currentNode = rootNode;
-            FindingANode parentNode;
+            BinaryTreeNodeFindingANode currentNode = rootNode;
+            BinaryTreeNodeFindingANode parentNode;
             while (true) {
                 parentNode = currentNode;
                 if (data < currentNode.data) {
@@ -39,8 +39,8 @@ class BinaryTree1 {
         }
     }
 
-    public FindingANode find(int key) {
-        FindingANode currentNode = rootNode;
+    public BinaryTreeNodeFindingANode find(int key) {
+        BinaryTreeNodeFindingANode currentNode = rootNode;
         while (currentNode.data != key) {
             if (key < currentNode.data) currentNode = currentNode.leftNode;
             else currentNode = currentNode.rightNode;
@@ -55,18 +55,18 @@ class Main1 {
     public static void main(String[] args) {
         BinaryTree1 binaryTree1 = new BinaryTree1();
         binaryTree1.insertNode(53);
-        FindingANode thirty = new FindingANode(30);
-        FindingANode seventyTwo = new FindingANode(72);
-        FindingANode fourteen = new FindingANode(14);
-        FindingANode thirtyNine = new FindingANode(39);
-        FindingANode sixtyOne = new FindingANode(61);
-        FindingANode eightyFour = new FindingANode(84);
-        FindingANode seventyNine = new FindingANode(79);
-        FindingANode nine = new FindingANode(9);
-        FindingANode TwentyThree = new FindingANode(23);
-        FindingANode thirtyFour = new FindingANode(34);
-        FindingANode fourtySeven = new FindingANode(47);
-        binaryTree1.rootNode = new FindingANode(53); // Initialize rootNode
+        BinaryTreeNodeFindingANode thirty = new BinaryTreeNodeFindingANode(30);
+        BinaryTreeNodeFindingANode seventyTwo = new BinaryTreeNodeFindingANode(72);
+        BinaryTreeNodeFindingANode fourteen = new BinaryTreeNodeFindingANode(14);
+        BinaryTreeNodeFindingANode thirtyNine = new BinaryTreeNodeFindingANode(39);
+        BinaryTreeNodeFindingANode sixtyOne = new BinaryTreeNodeFindingANode(61);
+        BinaryTreeNodeFindingANode eightyFour = new BinaryTreeNodeFindingANode(84);
+        BinaryTreeNodeFindingANode seventyNine = new BinaryTreeNodeFindingANode(79);
+        BinaryTreeNodeFindingANode nine = new BinaryTreeNodeFindingANode(9);
+        BinaryTreeNodeFindingANode TwentyThree = new BinaryTreeNodeFindingANode(23);
+        BinaryTreeNodeFindingANode thirtyFour = new BinaryTreeNodeFindingANode(34);
+        BinaryTreeNodeFindingANode fourtySeven = new BinaryTreeNodeFindingANode(47);
+        binaryTree1.rootNode = new BinaryTreeNodeFindingANode(53); // Initialize rootNode
         binaryTree1.rootNode.leftNode = thirty; // Initialize leftNode of rootNode
         binaryTree1.rootNode.rightNode = seventyTwo; // Initialize rightNode of rootNode
         thirty.leftNode = fourteen;
@@ -78,11 +78,11 @@ class Main1 {
         thirtyNine.leftNode = thirtyFour;
         thirtyNine.rightNode = fourtySeven;
         eightyFour.leftNode = seventyNine;
-        FindingANode findResult = binaryTree1.find(23);
-        if (findResult != null) {
-            System.out.println("Node found with key: " + findResult.data);
-        } else {
+        BinaryTreeNodeFindingANode findResult = binaryTree1.find(23);
+        if (findResult.data == Integer.MIN_VALUE) {
             System.out.println("Node with key not found.");
+        } else {
+            System.out.println("Node found with key: " + findResult.data);
         }
     }
 }
