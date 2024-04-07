@@ -1,14 +1,13 @@
 package binaryTree;
 
 public class HeightOfATree {
-    public static int sum(Node root) {
+    public static int height(Node root) {
         if (root == null) {
             return 0;
         }
-        int leftHalfSum = sum(root.leftNode);
-        int rightHalfSum = sum(root.rightNode);
-        int treeSum = leftHalfSum+rightHalfSum +root.data;
-        return treeSum;
+        int leftHalf = height(root.leftNode);
+        int rightHalf = height(root.rightNode);
+        return Math.max(leftHalf, rightHalf) + 1;
     }
 
     public static void main(String[] args) {
@@ -29,7 +28,7 @@ public class HeightOfATree {
         root.leftNode.rightNode = new Node(5);
         root.rightNode.leftNode = new Node(6);
         root.rightNode.rightNode = new Node(7);
-        System.out.println("The sum of the tree is : " + sum(root));
+        System.out.println("The height of the tree is : " + height(root));
     }
 
     static class Node {
