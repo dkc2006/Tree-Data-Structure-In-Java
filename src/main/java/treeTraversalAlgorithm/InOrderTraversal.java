@@ -1,11 +1,11 @@
 package treeTraversalAlgorithm;
 
-public class PreOrderTraversal {
+public class InOrderTraversal {
     public static void main(String[] args) {
         int[] nodes = new int[]{1, 2, 4, -1, -1, 5, -1, -1, -1, 3, -1, 6, -1, -1};
         BinaryTree binaryTree = new BinaryTree();
         Node root = BinaryTree.buildTree(nodes);
-        binaryTree.preorder(root);
+        binaryTree.inorder(root);
     }
 
     static class Node {
@@ -33,14 +33,14 @@ public class PreOrderTraversal {
             newNode.rightNode = buildTree(nodes);
             return newNode;
         }
-        //Preorder -> Root , Left Subtree,Right Subtree
-        public static void preorder(Node root){
+        //Inorder -> Left Subtree,Root,Right Subtree
+        public static void inorder(Node root){
             if(root==null){
                 return;
             }
+            inorder(root.leftNode);
             System.out.print(root.data+" ");
-            preorder(root.leftNode);
-            preorder(root.rightNode);
+            inorder(root.rightNode);
         }
     }
 }

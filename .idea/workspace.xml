@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d61e0caa-d09f-46e8-a3e0-936426a957e0" name="Changes" comment="first commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/treeTraversalAlgorithm/InOrderTraversal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/treeTraversalAlgorithm/LevelOrderTraversal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/treeTraversalAlgorithm/PostOrderTraversal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/binarySearchTree/BuildATree.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/binarySearchTree/BuildATree.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/binarySearchTree/BuildATreePreorder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/binaryTree/BuildATreePreorder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/binarySearchTree/DeleteANode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/binarySearchTree/DeleteANode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/binarySearchTree/FindingANode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/binarySearchTree/BinaryTreeNodeFindingANode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/treeTraversalAlgorithm/PreorderTraversal.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/treeTraversalAlgorithm/PreorderTraversal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/treeTraversalAlgorithm/PreorderTraversal.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +42,8 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.BinaryTree3.executor": "Debug",
     "Application.BuildATreePreorder.executor": "Debug",
-    "Application.InOrderTraversal.executor": "Debug",
+    "Application.InOrderTraversal.executor": "Run",
+    "Application.LevelOrderTraversal.executor": "Debug",
     "Application.Main.executor": "Debug",
     "Application.Main1.executor": "Debug",
     "Application.PostOrderTraversal.executor": "Debug",
@@ -54,6 +54,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "full.screen.before.presentation.mode": "false",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
     "node.js.detected.package.eslint": "true",
@@ -77,7 +78,7 @@
       <recent name="tree.binarySearchTree" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.LevelOrderTraversal">
+  <component name="RunManager" selected="Application.InOrderTraversal">
     <configuration name="BinaryTree3" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="binarySearchTree.BinaryTree3" />
       <module name="Tree-Data-Structure-In-Java" />
@@ -145,9 +146,9 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.InOrderTraversal" />
         <item itemvalue="Application.LevelOrderTraversal" />
         <item itemvalue="Application.PostOrderTraversal" />
-        <item itemvalue="Application.InOrderTraversal" />
         <item itemvalue="Application.PreOrderTraversal" />
         <item itemvalue="Application.BinaryTree3" />
       </list>
@@ -178,7 +179,10 @@
       <workItem from="1712129669973" duration="536000" />
       <workItem from="1712133925828" duration="2230000" />
       <workItem from="1712233493590" duration="876000" />
-      <workItem from="1712245431197" duration="8235000" />
+      <workItem from="1712245431197" duration="8516000" />
+      <workItem from="1712373796821" duration="1594000" />
+      <workItem from="1712409665004" duration="142000" />
+      <workItem from="1712483037868" duration="1739000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <option name="closed" value="true" />
@@ -252,7 +256,23 @@
       <option name="project" value="LOCAL" />
       <updated>1712125938624</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1712263254189</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1712263254189</updated>
+    </task>
+    <task id="LOCAL-00011" summary="first commit">
+      <option name="closed" value="true" />
+      <created>1712263300642</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1712263300642</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

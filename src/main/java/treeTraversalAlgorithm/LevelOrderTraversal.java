@@ -1,11 +1,14 @@
 package treeTraversalAlgorithm;
 
-public class PreOrderTraversal {
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class LevelOrderTraversal {
     public static void main(String[] args) {
         int[] nodes = new int[]{1, 2, 4, -1, -1, 5, -1, -1, -1, 3, -1, 6, -1, -1};
         BinaryTree binaryTree = new BinaryTree();
         Node root = BinaryTree.buildTree(nodes);
-        binaryTree.preorder(root);
+        binaryTree.levelOrder(root);
     }
 
     static class Node {
@@ -33,14 +36,26 @@ public class PreOrderTraversal {
             newNode.rightNode = buildTree(nodes);
             return newNode;
         }
-        //Preorder -> Root , Left Subtree,Right Subtree
-        public static void preorder(Node root){
-            if(root==null){
+
+        // Level Order Traversal
+        public static void levelOrder(Node root) {
+            if (root == null) {
                 return;
             }
-            System.out.print(root.data+" ");
-            preorder(root.leftNode);
-            preorder(root.rightNode);
+            Queue<Node> queue = new LinkedList<>();
+            queue.add(root);
+
+            while (!queue.isEmpty()) {
+                Node currentNode = queue.poll();
+                System.out.print(currentNode.data + " ");
+
+                if (currentNode.leftNode != null) {
+                    queue.add(currentNode.leftNode);
+                }
+                if (currentNode.rightNode != null) {
+                    queue.add(currentNode.rightNode);
+                }
+            }
         }
     }
 }
